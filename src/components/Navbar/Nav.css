@@ -1,0 +1,27 @@
+.search {
+	display: flex;
+	justify-content: center;
+}
+
+.search span {
+	background-color: #9933cc;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-size: 22px;
+}
+
+nav li:hover {
+	color: #9933cc;
+}
+
+.dropdown {
+	position: fixed;
+	top: 60px;
+	left: 220px;
+	width: 600px;
+	height: 300px;
+	transition: all ease-in 500ms;
+}
