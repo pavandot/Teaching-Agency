@@ -25,3 +25,12 @@ nav li:hover {
 	height: 300px;
 	transition: all ease-in 500ms;
 }
+
+.menu {
+	position: fixed;
+	top: 60px;
+	left: 0;
+	height: auto;
+	width: 100%;
+	transition: all 1ms linear ease-in;
+}

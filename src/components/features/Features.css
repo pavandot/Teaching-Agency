@@ -1,0 +1,33 @@
+.main-head {
+	color: #253242;
+	font-size: 50px;
+	line-height: 55px;
+}
+.second-head {
+	font-size: 1.4rem;
+	color: #253242;
+	font-weight: bold;
+}
+
+.feature-list {
+	color: #9ca4b1;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.section-one {
+		animation: fadeup 2s ease both;
+	}
+}
+
+@keyframes fadeup {
+	0% {
+		display: none;
+		transform: translate(0px, 100px);
+	}
+	100% {
+		display: block;
+		transform: translateY(0px, 0px);
+	}
+}

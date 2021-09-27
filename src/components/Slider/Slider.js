@@ -61,13 +61,15 @@ const Slider = () => {
 					<AiOutlineLeft className='text-4xl sm:text-6xl text-white cursor-pointer hover:text-gray-300' onClick={() => decSlideNumber()} />
 					<AiOutlineRight className='text-4xl sm:text-6xl text-white cursor-pointer hover:text-gray-300' onClick={() => incSlideNumber()} />
 				</div>
-				<div className='w-full flex justify-center items-center absolute down-link'>
-					<div>
-						<BsChevronDown className='down-arrow-1' />
-						<BsChevronDown className='down-arrow-2' />
-						<BsChevronDown className='down-arrow-3' />
+				<a href='#section-1'>
+					<div className='w-full flex justify-center items-center absolute down-link'>
+						<div>
+							<BsChevronDown className='down-arrow-1' />
+							<BsChevronDown className='down-arrow-2' />
+							<BsChevronDown className='down-arrow-3' id='section-1' />
+						</div>
 					</div>
-				</div>
+				</a>
 			</div>
 		</section>
 	);
