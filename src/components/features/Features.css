@@ -21,6 +21,19 @@
 	}
 }
 
+@media screen and (max-width: 600px) {
+	.main-head {
+		font-size: 25px;
+		line-height: normal;
+	}
+	.second-head {
+		font-size: 18px;
+	}
+	.feature-list {
+		font-size: 14px;
+		margin-bottom: 18px;
+	}
+}
 @keyframes fadeup {
 	0% {
 		display: none;

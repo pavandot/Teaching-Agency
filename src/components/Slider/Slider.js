@@ -62,7 +62,7 @@ const Slider = () => {
 					<AiOutlineRight className='text-4xl sm:text-6xl text-white cursor-pointer hover:text-gray-300' onClick={() => incSlideNumber()} />
 				</div>
 				<a href='#section-1'>
-					<div className='w-full flex justify-center items-center absolute down-link'>
+					<div className=' hidden sm:flex w-full  justify-center items-center absolute down-link'>
 						<div>
 							<BsChevronDown className='down-arrow-1' />
 							<BsChevronDown className='down-arrow-2' />
