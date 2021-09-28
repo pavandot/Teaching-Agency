@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Courses.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Courses = () => {
 	const [isHover, setIsHover] = useState(false);
+	useEffect(() => {
+		Aos.init({ duration: 1000, once: true });
+	}, []);
 	console.log(isHover);
 	const courses = [
 		{ img: "https://www.careerstepladder.com/images/careerladders/course_thumbnail/new/thumb/34.png", text: "Vedic Mathematics Magic (Advanced)" },
@@ -19,13 +24,13 @@ const Courses = () => {
 			<div>
 				<img src='https://www.careerstepladder.com/images/careerladders/csl/popular_courses_top_dots.png' alt='dots' className=' absolute top-20 ' />
 			</div>
-			<div className='mx-8 h-auto sm:mx-11 grid grid-cols-1 lg:grid-cols-3 gap-5 sm:gap-6'>
+			<div className='mx-8 h-auto lg:mx-11 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6'>
 				{courses.map((course, index) => {
 					return (
-						<div key={index}>
-							<div className='relative rounded-2xl  overflow-hidden courses-card'>
-								<img src={course.img} alt='text' className={`hover:scale-125 transform duration-500`} />
-								<div className='absolute z-30 top-0  text-white  flex flex-col justify-end w-full items-center px-5 h-full sm:px-8 '>
+						<div key={index} data-aos='fade-up'>
+							<div className='relative rounded-2xl  overflow-hidden courses-card  '>
+								<img src={course.img} alt='text' className='hover:scale-125 transform duration-500' />
+								<div className='absolute z-30 top-0  text-white  flex flex-col justify-end lg:w-full items-center px-5  h-full lg:px-8 ' onMouseEnter={(e) => console.log(e.isHover)}>
 									<h1 className='text-xl text-center font-bold'>{course.text}</h1>
 									<button className=' courses-btn font-bold '>Enrol Now</button>
 								</div>

@@ -17,9 +17,7 @@ function App() {
 			<div data-aos='fade-up'>
 				<Features />
 			</div>
-			<div data-aos='fade-up'>
-				<Courses />
-			</div>
+			<Courses />
 		</div>
 	);
 }

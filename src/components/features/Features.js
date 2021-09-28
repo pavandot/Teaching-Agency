@@ -22,8 +22,8 @@ const Features = () => {
 		},
 	];
 	return (
-		<section className='flex flex-col sm:flex-row justify-between items-start mt-24 sm:mx-10 mx-3 section-one pb-16 sm:pb-10'>
-			<div className=' sm:w-1/2'>
+		<section className='flex flex-col lg:flex-row justify-between items-start sm:items-center lg:items-start mt-24 lg:mx-10 mx-3 section-one pb-16 lg:pb-10'>
+			<div className=' lg:w-1/2'>
 				<h1 className=' font-black main-head mb-3'>Live, online classes by industry leaders</h1>
 				<h2 className=' second-head mb-3'>Learn directly from the experts, LIVE in real time.</h2>
 				<ul className='mr-2'>
