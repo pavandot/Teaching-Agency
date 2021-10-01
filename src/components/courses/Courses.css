@@ -16,3 +16,19 @@
 	background-color: white;
 	color: #9934cc;
 }
+
+.img-zoom {
+	animation: zoom 1s both ease;
+}
+
+@keyframes zoom {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(2);
+	}
+}

@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { CgArrowLongRight } from "react-icons/cg";
 import "./Courses.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 const Courses = () => {
+	const [isHover, setisHover] = useState(false);
+	const [check, setCheck] = useState("");
+	console.log(isHover);
 	useEffect(() => {
 		Aos.init({ duration: 1000, once: true });
 	}, []);
@@ -15,23 +18,36 @@ const Courses = () => {
 		{ img: "https://www.careerstepladder.com/images/careerladders/course_thumbnail/new/home/26.jpg", text: "Handwriting and Signature Analysis Mastery Program" },
 		{ img: "https://www.careerstepladder.com/images/careerladders/course_thumbnail/new/home/28.jpg", text: "Introduction to Lean Six Sigma" },
 	];
+	const zoomIN = (index) => {
+		setCheck(index);
+		setisHover(true);
+	};
+	const zoomOut = () => {
+		setCheck("");
+		setisHover(false);
+	};
 	return (
 		<section className='bg-customBlue relative pb-20'>
 			<h1 className='text-center pt-20 pb-9 text-2xl sm:text-5xl font-extrabold sm:font-bold' style={{ color: "#243141" }}>
 				Top instructor led courses
 			</h1>
 			<div>
-				<img src='https://www.careerstepladder.com/images/careerladders/csl/popular_courses_top_dots.png' alt='dots' className=' absolute top-20 ' />
+				<img src='https://www.careerstepladder.com/images/careerladders/csl/popular_courses_top_dots.png' alt='dots' className=' absolute top-20 hover:scale-125 transform duration-500 ' />
 			</div>
 			<div className='mx-8 h-auto lg:mx-11 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6'>
 				{courses.map((course, index) => {
 					return (
-						<div key={index} data-aos='fade-up'>
-							<div className='relative rounded-2xl  overflow-hidden courses-card  '>
-								<img src={course.img} alt='text' className='hover:scale-125 transform duration-500' />
-								<div className='absolute z-30 top-0  text-white  flex flex-col justify-end lg:w-full items-center px-5  h-full lg:px-8 ' onMouseEnter={(e) => console.log(e.isHover)}>
-									<h1 className='text-xl text-center font-bold'>{course.text}</h1>
-									<button className=' courses-btn font-bold '>Enrol Now</button>
+						<div key={index} data-aos='fade-up' onMouseEnter={() => zoomIN(index)} onMouseOut={() => zoomOut()}>
+							{/* <div className='absolute z-40 h-full w-full'></div> */}
+							<div className='relative rounded-2xl  overflow-hidden courses-'>
+								<img src={course.img} alt='text' className={` ${isHover && index === check && "scale-125"} transform duration-500`} />
+								<div className='absolute z-30 top-0  text-white  flex flex-col justify-end lg:w-full items-center px-5  h-full lg:px-8 ' onMouseEnter={() => zoomIN(index)} onMouseOut={() => zoomOut()}>
+									<h1 className='text-xl text-center font-bold' onMouseEnter={() => zoomIN(index)} onMouseOut={() => zoomOut()}>
+										{course.text}
+									</h1>
+									<button className=' courses-btn font-bold ' onMouseEnter={() => zoomIN(index)} onMouseOut={() => zoomOut()}>
+										Enrol Now
+									</button>
 								</div>
 							</div>
 						</div>
