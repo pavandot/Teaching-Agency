@@ -17,7 +17,7 @@ const Navbar = () => {
 						<img src='https://www.careerstepladder.com/images/careerladders/img/cl.svg' alt='logo' className='h-9 mr-2' />
 					</a>
 				</div>
-				<nav className=' hidden sm:flex items-center w-full justify-evenly nav '>
+				<nav className=' hidden lg:flex items-center w-full justify-evenly nav '>
 					<button className={` border-2 border-primary px-3 w-28 py-1 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-500 ${isOpen ? "bg-primary text-white" : "text-primary"}`} onClick={() => setIsOpen(!isOpen)}>
 						Browse <BsChevronDown className=' inline font-extrabold' />
 					</button>
@@ -37,7 +37,7 @@ const Navbar = () => {
 					<button className='text-primary border-2 border-primary px-1 w-28 py-1 rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors duration-500 '>Login</button>
 					<button className='text-white bg-primary border-2 border-primary px-1 w-28 py-1 rounded-lg font-semibold hover:bg-white hover:text-primary transition-colors duration-500 '>Sign up</button>
 				</nav>
-				<div className='sm:hidden text-3xl bg-primary rounded-full p-2 text-white' onClick={() => setIsMenu(!isMenu)}>
+				<div className='lg:hidden text-3xl bg-primary rounded-full p-2 text-white' onClick={() => setIsMenu(!isMenu)}>
 					{isMenu ? <AiOutlineClose /> : <AiOutlineMenu />}
 				</div>
 			</div>

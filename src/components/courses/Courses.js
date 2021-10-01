@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { CgArrowLongRight } from "react-icons/cg";
 import "./Courses.css";
 import Aos from "aos";
 import "aos/dist/aos.css";
 const Courses = () => {
-	const [isHover, setIsHover] = useState(false);
 	useEffect(() => {
 		Aos.init({ duration: 1000, once: true });
 	}, []);
-	console.log(isHover);
 	const courses = [
 		{ img: "https://www.careerstepladder.com/images/careerladders/course_thumbnail/new/thumb/34.png", text: "Vedic Mathematics Magic (Advanced)" },
 		{ img: "https://www.careerstepladder.com/images/careerladders/course_thumbnail/new/thumb/33.png", text: "Vedic Mathematics Magic (Senior)" },
@@ -17,7 +16,7 @@ const Courses = () => {
 		{ img: "https://www.careerstepladder.com/images/careerladders/course_thumbnail/new/home/28.jpg", text: "Introduction to Lean Six Sigma" },
 	];
 	return (
-		<section className='bg-customBlue relative'>
+		<section className='bg-customBlue relative pb-20'>
 			<h1 className='text-center pt-20 pb-9 text-2xl sm:text-5xl font-extrabold sm:font-bold' style={{ color: "#243141" }}>
 				Top instructor led courses
 			</h1>
@@ -39,12 +38,18 @@ const Courses = () => {
 					);
 				})}
 			</div>
-			<div className='p-20 flex justify-end'>
-				<div className='text-lg border-0'> {"-->"}</div>
-				<button className='text-lg text-primary font-semibold'>View All Courses</button>
-			</div>
 			<div>
-				<img src='https://www.careerstepladder.com/images/careerladders/csl/popular_courses_top_dots.png' alt='dots' className=' absolute right-0 bottom-32 ' />
+				<img src='https://www.careerstepladder.com/images/careerladders/csl/popular_courses_top_dots.png' alt='dots' className=' absolute right-0 bottom-40 ' />
+			</div>
+			<div className='mt-20 flex justify-end mx-10 items-center cursor-pointer'>
+				<div className='border-2 border-primary h-10 w-10 rounded-lg'>
+					<svg height='20' viewBox='0 0 30 13' fill='none' className='ml-4 mt-2'>
+						<path
+							fill='#9933CC'
+							d='M29.7204 7.07638C30.0456 6.75118 30.0456 6.22392 29.7204 5.89871L24.4208 0.599184C24.0956 0.273979 23.5684 0.273979 23.2432 0.599184C22.918 0.924389 22.918 1.45165 23.2432 1.77686L27.9539 6.48755L23.2432 11.1982C22.918 11.5234 22.918 12.0507 23.2432 12.3759C23.5684 12.7011 24.0956 12.7011 24.4208 12.3759L29.7204 7.07638ZM0.818359 7.32029L29.1315 7.32029L29.1315 5.65481L0.818359 5.65481L0.818359 7.32029Z'></path>
+					</svg>
+				</div>
+				<span className='ml-8 text-lg text-primary '>View all courses</span>
 			</div>
 		</section>
 	);

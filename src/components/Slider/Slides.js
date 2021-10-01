@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 const Slides = ({ slide, slideNumber }) => {
 	return (
