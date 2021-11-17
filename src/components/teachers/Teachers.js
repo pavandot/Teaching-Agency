@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 import SliderMob from "./SliderMob";
 import "./Teachers.css";
+import one from "../../img/1.jpg";
 
 const Teachers = () => {
 	const [hidden, setHidden] = useState(true);
@@ -28,7 +29,7 @@ const Teachers = () => {
 	}
 	const teachers = [
 		{
-			img: "https://www.careerstepladder.com/images/careerladders/cat1/trainer/1.png",
+			img: "https://i.ibb.co/K2mMH4x/1.jpg",
 			name: "Umama Tabassum",
 			field: "Former Software Developer and Certified Corporate Trainer",
 			desc:
@@ -36,14 +37,14 @@ const Teachers = () => {
 			paddingTop: "10",
 		},
 		{
-			img: "https://www.careerstepladder.com/images/careerladders/cat3/trainer/4.png",
+			img: "https://i.ibb.co/yV5tc9p/2.jpg",
 			name: "Dr Reena Sharma",
 			field: "Training Consultant",
 			desc:
 				"A hard working and qualified doctorate offering 14+ years of global experience in providing visionary leadership and quality education to a wide range of aspiring individuals. She has training and teaching experience in the USA, South America & Maldives. Her key professional skills include administration, innovative curriculum development, classroom management, parental involvement, student assessment and development schemes.",
 		},
 		{
-			img: "https://www.careerstepladder.com/images/careerladders/cat3/trainer/3.png",
+			img: "https://i.ibb.co/Bf0bxPs/3.jpg",
 			name: "Vanky Kenny Kataria",
 			field: "Digital Marketing Trainer, Consultant and Communication Skills Coach",
 			desc:
@@ -52,9 +53,9 @@ const Teachers = () => {
 				"'PeopleMaven' named him one of the Top 13 Emerging Communication Skills Coaches from around the world. He helps companies grow their brands digitally and has successfully coached many students and professionals to land their dream opportunity by training them in 'Digital Marketing'.",
 		},
 		{
-			img: "https://www.careerstepladder.com/images/careerladders/cat1/trainer/3.png",
+			img: "https://i.ibb.co/GQcVj5S/pexels-andrea-piacquadio-943084.jpg",
 			name: "Bijay Gautam",
-			field: "Co-Founder WYN Studio & Host - The Inspiring Talk and Podcast Unfiltered",
+			field: "Co-Founder WYM Studio & Host - The Inspiring Talk and Podcast Unfiltered",
 			desc:
 				"As India’s leading podcast expert, Bijay Gautam has trained more than 20 thousand people and several organizations to grow their reach and maximize profit using podcasts. Bijay has been featured by national media like The Hindu, Times of India, The Ken and The Sunday Guardian Live. He is a frequent speaker at international podcasting conferences and events like Podfest and International Podcast Day. He is also the Co-founder of WYN Studio, a creative content studio specialising in audio storytelling and podcasts.",
 		},

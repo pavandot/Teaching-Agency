@@ -10,21 +10,21 @@ import "./Slide.css";
 const Slider = () => {
 	const slides = [
 		{
-			img: SlideOne,
+			img: "https://www.careerstepladder.com/modules/mod_cslhomebanner/video/1.mp4",
 			textOne: "I want to kickstart my career.",
 			textTwo: "Build your skillset, get empowered, become the perfect candidate.",
 			textThree: "Learn from industry experts in a personalised environment.",
 			buttonText: "	Get started. Boost sour skill",
 		},
 		{
-			img: SlideTwo,
+			img: "https://www.careerstepladder.com/modules/mod_cslhomebanner/video/2.mp4",
 			textOne: "I need a change. A new path. A new goal.",
 			textTwo: "Learn the skills you need online, then follow your passion.",
 			textThree: "LIVE online courses, delivered by seasoned pros.",
 			buttonText: "Get started. Make the change",
 		},
 		{
-			img: SlideThree,
+			img: "https://www.careerstepladder.com/modules/mod_cslhomebanner/video/3.mp4",
 			textOne: "I love what I do & I want to get better.",
 			textTwo: "Diversify your skills. Evolve & Improve. All the way to the top.",
 			textThree: "Upskill in your own time & get that promotion you’re aiming for.",
