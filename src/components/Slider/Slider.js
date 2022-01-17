@@ -21,7 +21,7 @@ const Slider = () => {
 			textOne: "I need a change. A new path. A new goal.",
 			textTwo: "Learn the skills you need online, then follow your passion.",
 			textThree: "LIVE online courses, delivered by seasoned pros.",
-			buttonText: "Get started. Make the change",
+			buttonText: "Get started. Make the change ",
 		},
 		{
 			img: SlideThree,
@@ -32,12 +32,12 @@ const Slider = () => {
 		},
 	];
 	const [slideNumber, setSlideNumber] = useState(0);
-	useEffect(() => {
-		const intervalId = setInterval(() => {
-			incSlideNumber();
-		}, 6400);
-		return () => clearInterval(intervalId);
-	}, [slideNumber]);
+	// useEffect(() => {
+	// 	const intervalId = setInterval(() => {
+	// 		incSlideNumber();
+	// 	}, 6400);
+	// 	return () => clearInterval(intervalId);
+	// }, [slideNumber]);
 	function incSlideNumber() {
 		if (slideNumber >= slides.length - 1) {
 			setSlideNumber(0);

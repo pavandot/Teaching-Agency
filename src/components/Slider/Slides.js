@@ -11,11 +11,11 @@ const Slides = ({ slide, slideNumber }) => {
 						</video>
 						<div className='w-full slide-text transition-all '>
 							<h1 className={`sm:mb-5 mb-2 ${index === slideNumber && "text-one"} `}>{textOne}</h1>
-							<h1 className={`sm:mb-4  mb-2 ${index === slideNumber && "text-two"} `}>{textTwo}</h1>
+							<h1 className={`sm:mb-4 md:mx-10 mb-2 ${index === slideNumber && "text-two"} `}>{textTwo}</h1>
 							<h1 className={`sm:text-2xl font-bold ${index === slideNumber && "text-three"}`}>{textThree}</h1>
-							<div>
-								<a href=' #' className='flex text-lg justify-center items-center mt-8 text-three  '>
-									<p className={`  flex font-normal justify-center items-center  p-2 rounded-lg pr-5 outer__button ${index === slideNumber && "btn-aniamtion  button__left-right"}`}>
+							<div className='flex justify-center items-center'>
+								<a href=' #' className={`flex text-lg justify-center items-center mt-8 text-three relative rounded-lg overflow-hidden ${index === slideNumber && "hvr-sweep-to-right"}`}>
+									<p className={`  flex font-normal justify-center items-center border-0 p-2 rounded-lg pr-5 outer__button ${index === slideNumber && "btn-aniamtion"}`}>
 										<span className={`mr-3 text-3xl    `}>
 											<BsArrowRight className={`${index === slideNumber && "btn-icon-animation"}`} />
 										</span>
